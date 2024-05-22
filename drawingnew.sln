@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "drawingnew", "drawingnew\drawingnew.csproj", "{45A4D65F-7528-4127-BD58-45C11EF8BD30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "drawingnew", "drawingnew\drawingnew.csproj", "{45A4D65F-7528-4127-BD58-45C11EF8BD30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyClassLibrarynew", "MyClassLibrarynew\MyClassLibrarynew.csproj", "{9BE65040-29F6-47C6-BB35-A871C185C8BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{45A4D65F-7528-4127-BD58-45C11EF8BD30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45A4D65F-7528-4127-BD58-45C11EF8BD30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45A4D65F-7528-4127-BD58-45C11EF8BD30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BE65040-29F6-47C6-BB35-A871C185C8BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BE65040-29F6-47C6-BB35-A871C185C8BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BE65040-29F6-47C6-BB35-A871C185C8BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BE65040-29F6-47C6-BB35-A871C185C8BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
