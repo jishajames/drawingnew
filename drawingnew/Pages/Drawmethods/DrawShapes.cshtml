@@ -8,7 +8,7 @@
            <div class="col-md-6">
                <label asp-for="@Model.dimension.Name">Name</label>
                 <input type="text" class="form-control" asp-for="@Model.dimension.Name" id="txt_shapeName" />
-                <input type="hidden" id="txt_dimensionId" />
+                <input type="hidden" id="txt_dimensionId" asp-for="@Model.dimension.Id" />
            </div>
             <div class="col-md-6">
                 <label asp-for="@Model.dimension.Email">Email</label>
@@ -19,10 +19,13 @@
         <div class="form-group row">
             <div class="col-md-12">
                 @*<canvas id="canvas_circle" class="form-control toggle-circle" style="border:1px solid #000000;" asp-for="@Model.Dimensionfield"></canvas>*@
-                <canvas id="canvas_circle" class="form-control toggle-circle" style="border:1px solid #000000;" ></canvas>
-                <div id="button-circle" class="toggle-circle">
-                    <input type="button" id="clear" value="Clear">
-                </div>
+                <button id="drawCircleBtn">Draw Circle</button>
+                <button id="drawLineBtn">Draw Line</button>
+           
+                <button id="drawClearBtn">Clear</button>
+                <canvas id="canvas_circle" class="form-control toggle-circle" style="border:1px solid #000000;height:600px;" ></canvas>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script src="drawing.js"></script>
             </div>
         </div>
         <div class="form-group row">
@@ -32,3 +35,4 @@
         </div>
    </form>
 </div>
+@Html.AntiForgeryToken()

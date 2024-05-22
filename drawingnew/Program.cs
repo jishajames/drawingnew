@@ -16,6 +16,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<TestContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
+builder.Services.AddScoped<IDrawDataServices, DrawDataServices>();
+
 // Add services to the container.
 builder.Services.AddRazorPages();
 
