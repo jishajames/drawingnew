@@ -13,6 +13,7 @@ namespace drawingnew.Services
     {
         void SaveDimensionDetails(Dimension dimension);
         List<object> GetAllDimensions(int dimensionId);
+        List<object> GetAllDimensions();
     }
     public class DrawDataServices: IDrawDataServices
     {
@@ -58,6 +59,26 @@ namespace drawingnew.Services
 
                 });
             }
+            return results;
+        }
+        public List<object> GetAllDimensions()
+        {
+            var results = new List<object>();
+            var coreSettings = _context.Dimensions.FirstOrDefault();
+            //foreach (var company in public List<object> GetAllDimensions(int dimensionId)
+       
+
+
+                results.Add(new
+                {
+                    coreSettings.Id,
+                    coreSettings.Name,
+                    coreSettings.Email,
+                    coreSettings.Dimensionfield,
+
+
+                });
+            //}
             return results;
         }
     }

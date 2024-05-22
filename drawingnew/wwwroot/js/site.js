@@ -6,6 +6,13 @@
 //})
 $('#btn_DrawShapeSave').on('click', function (e) {
     e.preventDefault();
+    var id = $("#txt_dimensionId").val();
+    if (id != '') {
+        id = parseInt(id);
+    }
+    else {
+        id = 0;
+    }
     var name = $("#txt_shapeName").val();
     var email = $("#txt_shapeemail").val();
     var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
@@ -18,6 +25,7 @@ $('#btn_DrawShapeSave').on('click', function (e) {
         output += '(' + red + ',' + green + ',' + blue + ',' + alpha + ') ';
     }
     var object = {
+        id:id,
         'name': name,
         'email': email,
         'dimensionalfield': output
@@ -28,6 +36,7 @@ $('#btn_DrawShapeSave').on('click', function (e) {
             //url:'http://localhost:44387/API/DrawShapes/SaveDrawShapes',
             /*data: $('#frmdrawshapes').serialize(),*/
             data: {
+                'id':id,
                 'name': name,
                 'email': email,
                 'dimensionalfield': output
@@ -76,7 +85,7 @@ function getDimensions() {
     const option = 1;
 
     $.ajax({
-        url: '/Drawmethods/DrawShapes?handler=DrawShapes&dimensionId=' + option,
+        url: '/Drawmethods/DrawShapes?handler=DrawShapes',
         type: 'GET',
         dataType: 'json'
     }).done(function (data) {
