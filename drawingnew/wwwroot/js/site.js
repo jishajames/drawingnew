@@ -124,11 +124,15 @@ var shapeType;
 $('#drawCircleBtn').click(function (e) {
     e.preventDefault();
     shapeType = 'circle';
+    $('#drawCircleBtn').addClass('.btn-color');
+    $('#drawLineBtn').removeClass('.btn-color')
 });
 
 $('#drawLineBtn').click(function (e) {
     e.preventDefault();
     shapeType = 'line';
+    $('#drawCircleBtn').removeClass('.btn-color')
+    $('#drawLineBtn').addClass('.btn-color')
 });
 $('#drawClearBtn').click(function (e) {
     e.preventDefault();
