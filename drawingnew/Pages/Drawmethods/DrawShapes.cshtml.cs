@@ -33,10 +33,11 @@ namespace drawingnew.Pages.Drawmethods
 
         [BindProperty]
         public required Dimension dimension { get; set; }
-        public JsonResult OnPostSaveDrawShapes(string name, string email, string dimensionalfield)
+        public JsonResult OnPostSaveDrawShapes(int id,string name, string email, string dimensionalfield)
         {
 
             Dimension dm = new Dimension();
+            dm.Id = id;
             dm.Name = name;
             dm.Email = email;
             dm.Dimensionfield = dimensionalfield;
@@ -56,12 +57,12 @@ namespace drawingnew.Pages.Drawmethods
             return new JsonResult(new { status = status, message = message });
             //return new JsonResult(_drawservices.SaveDrawShapes(dm));
         }
-        public JsonResult OnGetDrawShapes(int dimensionId)
+        public JsonResult OnGetDrawShapes()
         {
 
            
 
-            return new JsonResult(_drawservices.GetAllDimensions(dimensionId));
+            return new JsonResult(_drawservices.GetAllDimensions());
             //return new JsonResult(_drawservices.SaveDrawShapes(dm));
         }
     }
