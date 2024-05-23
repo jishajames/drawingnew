@@ -48,7 +48,7 @@ $('#btn_DrawShapeSave').on('click', function (e) {
             if (result.status) {
                 if (result.message == 'Success') {
                     getDimensions();
-                    showStatusNotification(true, 'Dimensions saved successfully');
+                    alert('Dimensions saved successfully');
 
                 }
             } else {
@@ -97,6 +97,7 @@ function getDimensions() {
             $("#canvas_circle").val(data[i].dimensionfield);
             for (var i = 0; i < data[i].dimensionfield.length; i++) {
                 var barHeight = data[i].dimensionfield;
+                var barWidth = data[i].dimensionfield;
                 var x = i * barWidth;
                 var y = canvas.height - barHeight;
 
